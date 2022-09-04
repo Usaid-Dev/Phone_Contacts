@@ -14,15 +14,12 @@ class HomeState extends State<Home> {
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      theme: ThemeData(
-        primarySwatch: Colors.purple,
-      ),
       home: Scaffold(
         appBar: AppBar(
           centerTitle: true,
           title: const Text("Contact List"),
         ),
-        body: Container(
+        body: SizedBox(
           height: double.infinity,
           child: FutureBuilder(
             future: getContacts(),
